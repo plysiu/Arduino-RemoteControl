@@ -16,19 +16,33 @@ class Signal {
 	int centerValue;
 	int maxValue;
 	int minValue;
+
+	//Kalman - start
+	double q; //process noise covariance
+	double r; //measurement noise covariance
+	double x; //value
+	double p; //estimation error covariance
+	double k; //kalman gain
+	//Kalman - end
+
 protected:
 	static bool calibration;
 public:
-	const int START_VALUE = -1;
+
 	static bool setCalibrationOn();
 	static bool setCalibrationOff();
 	static bool getCalibrationStatus();
+
 	Signal(int pin);
 	void read();
 	int getValue();
+	void setValue(int _value);
 	int getMaxValue();
+	void setMaxValue(int _value);
 	int getMinValue();
+	void setMinValue(int _value);
 	int getCenterValue();
+	void setCenterValue(int _value);
 	int getTiltRod();
 	virtual ~Signal();
 };
