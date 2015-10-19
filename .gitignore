@@ -26,3 +26,10 @@
 *.exe
 *.out
 *.app
+
+#Release
+Release
+.settings
+.project
+.cproject
+spec.d
