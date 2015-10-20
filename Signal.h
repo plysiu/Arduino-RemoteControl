@@ -29,20 +29,25 @@ protected:
 	static bool calibration;
 public:
 
-	static bool setCalibrationOn();
-	static bool setCalibrationOff();
+	static void setCalibrationOn();
+	static void setCalibrationOff();
 	static bool getCalibrationStatus();
 
 	Signal(int pin);
 	void read();
+
 	int getValue();
 	void setValue(int _value);
+
 	int getMaxValue();
 	void setMaxValue(int _value);
+
 	int getMinValue();
 	void setMinValue(int _value);
+
 	int getCenterValue();
 	void setCenterValue(int _value);
+
 	int getTiltRod();
 	virtual ~Signal();
 };
