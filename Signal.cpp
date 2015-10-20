@@ -94,7 +94,6 @@ void Signal::setCenterValue(int _value) {
 
 int Signal::getTiltRod() {
 	if (this->getValue() > this->getCenterValue()) {
-
 		return (int) 127 * (this->getValue() - this->getCenterValue())
 				/ (this->getMaxValue() - this->getCenterValue());
 	}
@@ -104,7 +103,6 @@ int Signal::getTiltRod() {
 				/ (this->getMinValue() - this->getCenterValue());
 	}
 	return 0;
-
 }
 
 Signal::~Signal() {
