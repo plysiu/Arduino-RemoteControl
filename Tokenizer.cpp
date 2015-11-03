@@ -19,13 +19,14 @@ bool Tokenizer::isSign(char character) {
 /**
  */
 bool Tokenizer::isSignal(char character) {
-	return character == 'S';
+	return character == 'S' || character == 's';
 }
 /**
  */
 bool Tokenizer::isInHexRange(char character) {
 	return (character >= '0' && character <= '9')
-			|| (character >= 'A' && character <= 'F') || (character >= 'a' && character <= 'f');
+			|| (character >= 'A' && character <= 'F')
+			|| (character >= 'a' && character <= 'f');
 }
 
 Token Tokenizer::next() {

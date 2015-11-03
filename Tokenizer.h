@@ -10,12 +10,12 @@
 #include "StandardCplusplus.h"
 #include <string>
 #include <list>
-namespace RemoteControl{
+namespace RemoteControl {
 enum class TokenizerState {
-  Init, Signal, SignalId,Sign, Value,
+	Init, Signal, SignalId, Sign, Value,
 };
 enum class TokenType {
-  Signal,SignalId,  Sign,Value, Error, End
+	Signal, SignalId, Sign, Value, Error, End
 };
 
 

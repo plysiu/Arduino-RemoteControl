@@ -29,6 +29,8 @@ enum class ValuesRange
 		MIN = -127, CENTER = 0, MAX = 127
 
 };
+const int MIN = -127;
+const int MAX = 127;
 
 struct Signal {
 	uint8_t id;
